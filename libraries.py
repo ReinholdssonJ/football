@@ -15,4 +15,5 @@ import json
 import numpy as np
 import pandas as pd
 
+# Key for authenticating on website
 MyKey = "c9ec6c67bce8b8f11e8c83cfdb868ce9"

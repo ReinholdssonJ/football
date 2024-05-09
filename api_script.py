@@ -17,37 +17,22 @@ exec(open('libraries.py').read())
 # Load custom function
 exec(open('functions.py').read())
 
+# Get some data in 
+json_data = get_data(player_id=276, season=2022, league=61)
 
+# Convert json string into a dictionary
+dic = json.loads(json_data)
 
-#Prints out the results as a string
-print(data.decode("utf-8"))
+# The data is all in the 'response' key
+response = dict(dic['response'][0])
 
-#Trying to make the results into a dictionary.
-result_string = data.decode("utf-8")
+player = response['player']
 
-test = json.loads(result_string)
-response = test['response']
-player = response[0]
+player.keys()
 
-items_to_remove = ['get','parameters', 'errors', 'results', 'paging']
+statistics = response['statistics'][0]
 
-for item in items_to_remove:
-    del test[item]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+statistics.keys()
 
 
 

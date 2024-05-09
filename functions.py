@@ -7,14 +7,6 @@ Created on Thu May  9 22:03:16 2024
 Script to access the API
 """
 
-# This is the key that authenticates me to the website
-
-#player_id=276
-#season=2022
-#league=61
-
-#import http.client
-
 def get_data(player_id, 
               season, 
               league,
@@ -35,6 +27,7 @@ def get_data(player_id,
         data = get_data(player_id=276, season=2022, league=61)
     
     """
+    
     # Setup connection
     conn = http.client.HTTPSConnection("v3.football.api-sports.io")
     
